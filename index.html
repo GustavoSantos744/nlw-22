@@ -15,12 +15,19 @@
       type="text/javascript"
     ></script>
 
+
+    
+
+
     <script type="text/javascript">
-      const myWidget = cloudinary.createUploadWidget(
-        {
-          cloudName: "my_cloud_name",
-          uploadPreset: "my_preset",
-        },
+
+     const config = {
+        cloud_name: 'dojxoeovo',
+        upload_preset: 'uPload_nlw',
+    }
+
+
+      const myWidget = cloudinary.createUploadWidget(config,
         (error, result) => {
           if (!error && result && result.event === "success") {
             console.log("Done! Here is the image info: ", result.info);
